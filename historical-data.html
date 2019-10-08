@@ -1,0 +1,1085 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>historical-data</title>
+    <link rel="stylesheet" href="./vendor/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="./vendor/font-awesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- 这是histotrical-data 的CSS样式 -->
+    <link rel="stylesheet" href="css/historical-data.css">
+    <!-- 这是框架Echarts的js包 -->
+    <script src="./js/echarts.min.js"></script>
+    <script src="./js/jquery-1.12.4.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+</head>
+<body class="sidebar-fixed header-fixed" style="font-size: 18px;background-color: #000;">
+<div class="page-wrapper">
+    <!-- 上边栏 -->
+    <nav class="navbar page-header" style="background: linear-gradient(to left,#7b4397,#2196f3">
+       <!--  <a href="#" class="btn btn-link sidebar-mobile-toggle d-md-none mr-auto">
+            <i class="fa fa-bars"></i>
+        </a> -->
+       <a class="navbar-brand" href="http://bbwuiot.com/" target="blank">
+            <img src="./imgs/捕获50.png" alt="logo">
+            <span style="color: #fff; font-size: 24px">北部湾大学物联网协会</span>
+        </a>
+        <h1 style="font-size: 40px; margin-bottom: .5rem; font-weight: 700px; color: #f9d1d1">耕&nbsp&nbsp云</h1>
+        <a href="#" class="btn btn-link sidebar-toggle d-md-down-none">
+            <i class="fa fa-bars" style="font-size: 20px"></i>
+        </a>  
+    </nav>
+<!-- 右侧部分 -->
+    <div class="main-container">
+        <div class="sidebar">
+            <nav class="sidebar-nav" style="font-size: 16px;">
+            <!-- 左边栏 -->
+                <ul class="nav">
+                    <li class="nav-title">智慧农业管理界面</li>
+
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link ">
+                            <i class="icon icon-speedometer"></i> 数据中心
+                        </a>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a href="pests.html" class="nav-link ">
+                            <i class="icon icon-graph"></i> 病虫害 <i></i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="historical-data.html" class="nav-link active">
+                            <i class="icon icon-puzzle"></i> 历史数据
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="warn-control.html" class="nav-link">
+                            <i class="icon icon-grid"></i> 预警控制
+                        </a>
+                    </li>
+
+                    <li class="nav-title">更多</li>
+
+                    <li class="nav-item nav-dropdown">
+                        <a href="#" class="nav-link nav-dropdown-toggle">
+                            <i class="icon icon-umbrella"></i> 个人中心 <i class="fa fa-caret-left"></i>
+                        </a>
+
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a href="login.html" class="nav-link">
+                                    <i class="icon icon-umbrella"></i> 登录
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="register.html" class="nav-link">
+                                    <i class="icon icon-umbrella"></i> 注册
+                                </a>
+                            </li>  
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+<!-- 中间内容部分 -->
+      <div class="content" style="background: #87bdda;padding: 0 32px 32px 32px;">
+        <div>
+          <!-- 小小的导航栏部分 -->
+          <ul class="bread">
+              <li style="font-size: 27px;">耕云</li>
+              <li style="color: #845d5d">/</li>
+              <li style="color: #845d5d">历史数据</li>
+          </ul>
+       </div>
+       <div style="margin: 50px 0 0 0">
+         <!-- 对应数据的导航条部分 -->
+          <ul class="tab" >
+            <li class="tab-item active">室内温度<span>◆</span></li>
+            <li class="tab-item">室内湿度<span>◆</span></li>
+            <!-- <li class="tab-item">土壤温度<span>◆</span></li> -->
+            <li class="tab-item">土壤湿度<span>◆</span></li>
+            <li class="tab-item">二氧化碳浓度<span>◆</span></li>
+            <li class="tab-item">光照强度</li>
+          </ul>
+
+          <div class="products">
+            <!-- 对应的室内温度 -->
+            <div class="main selected" >
+              <div style="float: left;" class="divl">
+              <table class="table table-bordered">
+                <!-- <caption>历史数据</caption> -->
+                <thead>
+                    <tr>
+                        <th>时间</th>
+                        <th>最高室内温度</th>
+                        <th>最低室内温度</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2019/6/18 </td>
+                        <td>25℃</td>
+                        <td>11℃</td>
+                    </tr>
+                    <tr>
+                        <td>2019/6/19 </td>
+                        <td>23℃</td>
+                        <td>11℃</td>
+                    </tr>
+                    <tr>
+                        <td>2019/6/20 </td>
+                        <td>28℃</td>
+                        <td>11℃</td>
+                    </tr>
+                     <tr>
+                        <td>2019/6/21 </td>
+                        <td>32℃</td>
+                        <td>11℃</td>
+                    </tr> 
+                    <tr>
+                        <td>2019/6/22 </td>
+                        <td>29℃</td>
+                        <td>11℃</td>
+                    </tr> 
+                    <tr>
+                        <td>2019/6/23 </td>
+                        <td>27℃</td>
+                        <td>11℃</td>
+                    </tr> 
+                    <tr>
+                        <td>2019/6/24 </td>
+                        <td>24℃</td>
+                        <td>11℃</td>
+                    </tr> 
+                </tbody>
+              </table>
+              <div>
+                <ul class="pagination">
+                  <li><a href="#">&laquo;下一页</a></li>
+                  <li><a href="#">&raquo;下一页</a></li>
+                  </ul>
+              </div>
+              </div>
+
+              <div style="float: right; margin: 50px 50px 0px 0px">
+               <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                <div id="main1" style="width: 540px;height:340px;"></div>
+                <script type="text/javascript">
+                    // 基于准备好的dom，初始化echarts实例
+                    var myChart = echarts.init(document.getElementById('main1'));
+
+                    // 指定图表的配置项和数据
+                    var option = {
+                          title: {
+                              text: "室内温度",
+                              textStyle: {
+                                  color: "rgb(51, 53, 51)"
+                              },
+                              // backgroundColor: "rgb(186, 216, 186)"
+                          },
+                          tooltip: {
+                              trigger: "axis"
+                          },
+                          legend: {
+                              data: ["最高室内温度", "最低温度"]
+                          },
+                          toolbox: {
+                              show: true,
+                              feature: {
+                                  dataView: {
+                                      show: true,
+                                      iconStyle: {
+                                                borderColor: "rgb(222, 37, 71)"
+                                                },
+                                      readOnly: true
+                                  },
+                                  magicType: {
+                                      type: ["line", "bar"],
+                                      show: false
+                                  },
+                                  restore: {
+                                    iconStyle: {
+                                                borderColor: "rgb(222, 37, 71)"
+                                                },
+                                      show: true
+                                  },
+                                  saveAsImage: {
+                                    iconStyle: {
+                                                borderColor: "rgb(222, 37, 71)"
+                                                },
+                                      show: true
+                                  },
+                                  dataZoom: {
+                                    iconStyle: {
+                                                borderColor: "rgb(222, 37, 71)"
+                                                },
+                                      show: true
+                                  },
+                                  mark: {
+                                      show: false
+                                  }
+                              }
+                          },
+                          calculable: true,
+                          xAxis: [
+                              {
+                                  type: "category",
+                                  boundaryGap: false,
+                                  data: ["2019/6/18", "2019/6/18", "2019/6/18", "2019/6/18", "2019/6/18", "2019/6/18", "2019/6/18"],
+                                  axisTick: {
+                                      length: 5,
+                                      interval: 0
+                                  },
+                                  splitNumber: 51,
+                                  splitLine: {
+                                      show: false
+                                  },
+                                  axisLabel: {
+                                      interval: 0,
+                                      show: true
+                                  }
+                              }
+                          ],
+                          yAxis: [
+                              {
+                                  type: "value",
+                                  name: "ppm"
+                              }
+                          ],
+                          series: [
+                              {
+                                  name: "最高室内温度",
+                                  type: "line",
+                                  data: [32, 30, 21, 22, 34, 31, 22],
+                                  itemStyle: {
+                                      normal: {
+                                          lineStyle: {
+                                              color: "rgb(222, 37, 71)",
+                                              width: 3
+                                          },
+                                          color: "rgb(222, 37, 71)"
+                                      }
+                                  },
+                                  smooth: true
+                              },
+                              {
+                                  type: "line",
+                                  name: "最低温度",
+                                  data: [20, 10, 15, 14, 17, 16, 10],
+                                  itemStyle: {
+                                      normal: {
+                                          lineStyle: {
+                                              color: "rgb(222, 87, 71)",
+                                              width: 3
+                                          },
+                                          color: "rgb(222, 86, 39)"
+                                      }
+                                  },
+                              }
+                          ],
+                          // backgroundColor: "rgb(169, 214, 169)"
+                      }
+                    // 使用刚指定的配置项和数据显示图表。
+                    myChart.setOption(option);
+                </script>
+                <!-- 查询功能 -->
+                    <div id="chaxun" style="margin-left: -17px;float: right;">
+                      <!-- <i class="fa fa-sun" aria-hidden="true"></i> -->
+                      <label for="star">Star</label>
+                      <input type="text" id="firstname"  placeholder="YY-mm-dd" class="ra" autocomplete="off">
+                      <label for="end">End</label>
+                      <input type="text"   placeholder="YY-mm-dd" class="ra" autocomplete="off">
+                      <button type="submit" class="btn1 btn-default">查询</button>
+                    </div>
+             </div>
+            </div>
+            <!-- 对应的室内湿度 -->
+            <div class="main">
+              <div style="float: left;" class="divl">
+              <table class="table table-bordered">
+                <!-- <caption>历史数据</caption> -->
+                <thead>
+                    <tr>
+                        <th>时间</th>
+                        <th>最高室内湿度</th>
+                        <th>最低室内湿度</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2019/6/18 </td>
+                        <td>25℃</td>
+                        <td>11℃</td>
+                    </tr>
+                    <tr>
+                        <td>2019/6/19 </td>
+                        <td>23℃</td>
+                        <td>11℃</td>
+                    </tr>
+                    <tr>
+                        <td>2019/6/20 </td>
+                        <td>28℃</td>
+                        <td>11℃</td>
+                    </tr>
+                     <tr>
+                        <td>2019/6/21 </td>
+                        <td>32℃</td>
+                        <td>11℃</td>
+                    </tr> 
+                    <tr>
+                        <td>2019/6/22 </td>
+                        <td>29℃</td>
+                        <td>11℃</td>
+                    </tr> 
+                    <tr>
+                        <td>2019/6/23 </td>
+                        <td>27℃</td>
+                        <td>11℃</td>
+                    </tr> 
+                    <tr>
+                        <td>2019/6/24 </td>
+                        <td>24℃</td>
+                        <td>11℃</td>
+                    </tr> 
+                </tbody>
+              </table>
+              <div>
+                <ul class="pagination">
+                  <li><a href="#">&laquo;下一页</a></li>
+                  <li><a href="#">&raquo;下一页</a></li>
+                  </ul>
+              </div>
+              </div>
+              <div style="float: right; margin: 50px 50px 0px 0px;">
+               <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                <div id="main2" style="width: 540px;height:340px;"></div>
+                <script type="text/javascript">
+                    // 基于准备好的dom，初始化echarts实例
+                    var myChart = echarts.init(document.getElementById('main2'));
+
+                    // 指定图表的配置项和数据
+                    var option = {
+                          title: {
+                              text: "室内湿度",
+                              textStyle: {
+                                  color: "rgb(51, 53, 51)"
+                              },
+                              // backgroundColor: "rgb(186, 216, 186)"
+                          },
+                          tooltip: {
+                              trigger: "axis"
+                          },
+                          legend: {
+                              data: ["最高室内湿度", "最低室内湿度"]
+                          },
+                          toolbox: {
+                              show: true,
+                              feature: {
+                                  dataView: {
+                                      show: true,
+                                      iconStyle: {
+                                                borderColor: "rgb(153, 102, 255"
+                                                },
+                                      readOnly: true
+                                  },
+                                  magicType: {
+                                      type: ["line", "bar"],
+                                      show: false
+                                  },
+                                  restore: {
+                                    iconStyle: {
+                                                borderColor: "rgb(153, 102, 255"
+                                                },
+                                      show: true
+                                  },
+                                  saveAsImage: {
+                                    iconStyle: {
+                                                borderColor: "rgb(153, 102, 255"
+                                                },
+                                      show: true
+                                  },
+                                  dataZoom: {
+                                    iconStyle: {
+                                                borderColor: "rgb(153, 102, 255"
+                                                },
+                                      show: true
+                                  },
+                                  mark: {
+                                      show: false
+                                  }
+                              }
+                          },
+                          calculable: true,
+                          xAxis: [
+                              {
+                                  type: "category",
+                                  boundaryGap: false,
+                                  data: ["2019/6/18", "2019/6/18", "2019/6/18", "2019/6/18", "2019/6/18", "2019/6/18", "2019/6/18"],
+                                  axisTick: {
+                                      length: 5,
+                                      interval: 0
+                                  },
+                                  splitNumber: 51,
+                                  splitLine: {
+                                      show: false
+                                  },
+                                  axisLabel: {
+                                      interval: 0,
+                                      show: true
+                                  }
+                              }
+                          ],
+                          yAxis: [
+                              {
+                                  type: "value",
+                                  name: "ppm"
+                              }
+                          ],
+                          series: [
+                              {
+                                  name: "最高室内湿度",
+                                  type: "line",
+                                  data: [32, 30, 21, 22, 34, 31, 22],
+                                  itemStyle: {
+                                      normal: {
+                                          lineStyle: {
+                                              color: "rgb(153, 102, 255)",
+                                              width: 3
+                                          },
+                                          color: "rgb(110, 153, 224)"
+                                      }
+                                  },
+                                  smooth: true
+                              },
+                              {
+                                  type: "line",
+                                  name: "最低室内湿度",
+                                  data: [20, 10, 15, 14, 17, 16, 10],
+                                  itemStyle: {
+                                      normal: {
+                                          lineStyle: {
+                                              color: "rgb(133, 158, 199)",
+                                              width: 3
+                                          },
+                                          color: "rgb(133, 158, 199)"
+                                      }
+                                  },
+                              }
+                          ],
+                          // backgroundColor: "rgb(169, 214, 169)"
+                      }
+
+                    // 使用刚指定的配置项和数据显示图表。
+                    myChart.setOption(option);
+                </script>
+                <div id="chaxun" style="margin-left: -17px;float: right;">
+                      <!-- <i class="fa fa-sun" aria-hidden="true"></i> -->
+                      <label for="star">Star</label>
+                      <input type="text" id="firstname"  placeholder="YY-mm-dd" class="ra" autocomplete="off">
+                      <label for="end">End</label>
+                      <input type="text"   placeholder="YY-mm-dd" class="ra" autocomplete="off">
+                      <button type="submit" class="btn1 btn-default">查询</button>
+                    </div>
+             </div>
+            </div>
+            <!-- 对应的土壤湿度 -->
+            <div class="main">
+              <div style="float: left;" class="divl">
+              <table class="table table-bordered">
+                <!-- <caption>历史数据</caption> -->
+                <thead>
+                    <tr>
+                        <th>时间</th>
+                        <th>最高土壤湿度</th>
+                        <th>最低土壤湿度</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2019/6/18 </td>
+                        <td>25℃</td>
+                        <td>11℃</td>
+                    </tr>
+                    <tr>
+                        <td>2019/6/19 </td>
+                        <td>23℃</td>
+                        <td>11℃</td>
+                    </tr>
+                    <tr>
+                        <td>2019/6/20 </td>
+                        <td>28℃</td>
+                        <td>11℃</td>
+                    </tr>
+                     <tr>
+                        <td>2019/6/21 </td>
+                        <td>32℃</td>
+                        <td>11℃</td>
+                    </tr> 
+                    <tr>
+                        <td>2019/6/22 </td>
+                        <td>29℃</td>
+                        <td>11℃</td>
+                    </tr> 
+                    <tr>
+                        <td>2019/6/23 </td>
+                        <td>27℃</td>
+                        <td>11℃</td>
+                    </tr> 
+                    <tr>
+                        <td>2019/6/24 </td>
+                        <td>24℃</td>
+                        <td>11℃</td>
+                    </tr> 
+                </tbody>
+              </table>
+                <div>
+                <ul class="pagination">
+                  <li><a href="#">&laquo;下一页</a></li>
+                  
+                  <li><a href="#">&raquo;下一页</a></li>
+                  </ul>
+              </div>
+              </div>
+              <div style="float: right; margin: 50px 50px 0px 0px;">
+               <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                <div id="main4" style="width: 540px;height:340px;"></div>
+                <script type="text/javascript">
+                    // 基于准备好的dom，初始化echarts实例
+                    var myChart = echarts.init(document.getElementById('main4'));
+
+                    // 指定图表的配置项和数据
+                    var option = {
+                            title: {
+                                text: "土壤湿度",
+                                textStyle: {
+                                    color: "rgb(51, 53, 51)"
+                                },
+                                // backgroundColor: "rgb(186, 216, 186)"
+                            },
+                            tooltip: {
+                                trigger: "axis"
+                            },
+                            legend: {
+                                data: ["最高湿度", "最低湿度"]
+                            },
+                            toolbox: {
+                                show: true,
+                                feature: {
+                                    dataView: {
+                                        show: true,
+                                        iconStyle: {
+                                                borderColor: "rgb(34, 97, 99)"
+                                                },
+                                        readOnly: true
+                                    },
+                                    magicType: {
+                                        type: ["line", "bar"],
+                                        show: false
+                                    },
+                                    restore: {
+                                      iconStyle: {
+                                                borderColor: "rgb(34, 97, 99)"
+                                                },
+                                        show: true
+                                    },
+                                    saveAsImage: {
+                                      iconStyle: {
+                                                borderColor: "rgb(34, 97, 99)"
+                                                },
+                                        show: true
+                                    },
+                                    dataZoom: {
+                                      iconStyle: {
+                                                borderColor: "rgb(34, 97, 99)"
+                                                },
+                                        show: true
+                                    },
+                                    mark: {
+                                        show: false
+                                    }
+                                }
+                            },
+                            calculable: true,
+                            xAxis: [
+                                {
+                                    type: "category",
+                                    boundaryGap: false,
+                                    data: ["2019/6/18", "2019/6/18", "2019/6/18", "2019/6/18", "2019/6/18", "2019/6/18", "2019/6/18"],
+                                    axisTick: {
+                                        length: 5,
+                                        interval: 0
+                                    },
+                                    splitNumber: 51,
+                                    splitLine: {
+                                        show: false
+                                    },
+                                    axisLabel: {
+                                        interval: 0,
+                                        show: true
+                                    }
+                                }
+                            ],
+                            yAxis: [
+                                {
+                                    type: "value",
+                                    name: "ppm"
+                                }
+                            ],
+                            series: [
+                                {
+                                    name: "最高湿度",
+                                    type: "line",
+                                    data: [32, 30, 21, 22, 34, 31, 22],
+                                    itemStyle: {
+                                        normal: {
+                                            lineStyle: {
+                                                // color: "rgb(75, 192, 192)",
+                                                color: "rgb(34, 87, 99)",
+                                                
+                                                
+                                                width: 3
+                                            },
+                                            color: "rgb(34, 87, 99)"
+                                        }
+                                    },
+                                    smooth: true
+                                },
+                                {
+                                    type: "line",
+                                    name: "最低湿度",
+                                    data: [20, 10, 15, 14, 17, 16, 10],
+                                    itemStyle: {
+                                        normal: {
+                                            lineStyle: {
+                                                color: "rgb(50, 90, 99)",
+                                                width: 3
+                                            },
+                                            color: "rgb(34, 87, 99)"
+                                        }
+                                    },
+                                }
+                            ],
+                            // backgroundColor: "rgb(169, 214, 169)"
+                        }
+
+                    // 使用刚指定的配置项和数据显示图表。
+                    myChart.setOption(option);
+                </script>
+                <div id="chaxun" style="margin-left: -17px;float: right;">
+                      <!-- <i class="fa fa-sun" aria-hidden="true"></i> -->
+                      <label for="star">Star</label>
+                      <input type="text" id="firstname"  placeholder="YY-mm-dd" class="ra" autocomplete="off">
+                      <label for="end">End</label>
+                      <input type="text"   placeholder="YY-mm-dd" class="ra" autocomplete="off">
+                      <button type="submit" class="btn1 btn-default">查询</button>
+                    </div>
+             </div>
+            </div>
+            <!-- 对应的二氧化碳浓度 -->
+            <div class="main">
+              <div style="float: left;" class="divl">
+              <table class="table table-bordered">
+                <!-- <caption>历史数据</caption> -->
+                <thead>
+                    <tr>
+                        <th>时间</th>
+                        <th>最高CO2浓度</th>
+                        <th>最低CO2浓度</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2019/6/18 </td>
+                        <td>25℃</td>
+                        <td>11℃</td>
+                    </tr>
+                    <tr>
+                        <td>2019/6/19 </td>
+                        <td>23℃</td>
+                        <td>11℃</td>
+                    </tr>
+                    <tr>
+                        <td>2019/6/20 </td>
+                        <td>28℃</td>
+                        <td>11℃</td>
+                    </tr>
+                     <tr>
+                        <td>2019/6/21 </td>
+                        <td>32℃</td>
+                        <td>11℃</td>
+                    </tr> 
+                    <tr>
+                        <td>2019/6/22 </td>
+                        <td>29℃</td>
+                        <td>11℃</td>
+                    </tr> 
+                    <tr>
+                        <td>2019/6/23 </td>
+                        <td>27℃</td>
+                        <td>11℃</td>
+                    </tr> 
+                    <tr>
+                        <td>2019/6/24 </td>
+                        <td>24℃</td>
+                        <td>11℃</td>
+                    </tr> 
+                </tbody>
+              </table><div>
+                <ul class="pagination">
+                  <li><a href="#">&laquo;下一页</a></li>
+                  
+                  <li><a href="#">&raquo;下一页</a></li>
+                  </ul>
+              </div></div>
+              <div style="float: right; margin: 50px 50px 0px 0px;">
+               <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                <div id="main5" style="width: 540px;height:340px;"></div>
+                <script type="text/javascript">
+                    // 基于准备好的dom，初始化echarts实例
+                    var myChart = echarts.init(document.getElementById('main5'));
+
+                    // 指定图表的配置项和数据
+                    var option = {
+                            title: {
+                                text: "二氧化碳浓度",
+                                textStyle: {
+                                    color: "rgb(51, 53, 51)"
+                                },
+                                // backgroundColor: "rgb(186, 216, 186)"
+                            },
+                            tooltip: {
+                                trigger: "axis"
+                            },
+                            legend: {
+                                data: ["最高气温", "最低气温"]
+                            },
+                            toolbox: {
+                                show: true,
+                                feature: {
+                                    dataView: {
+                                        show: true,
+                                        iconStyle: {
+                                                borderColor: "rgb(56, 137, 252)"
+                                                },
+                                        readOnly: true
+                                    },
+                                    magicType: {
+                                        type: ["line", "bar"],
+                                        show: false
+                                    },
+                                    restore: {
+                                      iconStyle: {
+                                                borderColor: "rgb(56, 137, 252)"
+                                                },
+                                        show: true
+                                    },
+                                    saveAsImage: {
+                                      iconStyle: {
+                                                borderColor: "rgb(56, 137, 252)"
+                                                },
+                                        show: true
+                                    },
+                                    dataZoom: {
+                                      iconStyle: {
+                                                borderColor: "rgb(56, 137, 252)"
+                                                },
+                                        show: true
+                                    },
+                                    mark: {
+                                        show: false
+                                    }
+                                }
+                            },
+                            calculable: true,
+                            xAxis: [
+                                {
+                                    type: "category",
+                                    boundaryGap: false,
+                                    data: ["2019/6/18", "2019/6/18", "2019/6/18", "2019/6/18", "2019/6/18", "2019/6/18", "2019/6/18"],
+                                    axisTick: {
+                                        length: 5,
+                                        interval: 0
+                                    },
+                                    splitNumber: 51,
+                                    splitLine: {
+                                        show: false
+                                    },
+                                    axisLabel: {
+                                        interval: 0,
+                                        show: true
+                                    }
+                                }
+                            ],
+                            yAxis: [
+                                {
+                                    type: "value",
+                                    name: "ppm"
+                                }
+                            ],
+                            series: [
+                                {
+
+                                    name: "最高气温",
+                                    type: "line",
+                                    data: [32, 30, 21, 22, 34, 31, 22],
+                                    itemStyle: {
+                                        normal: {
+                                            lineStyle: {
+                                                color: "rgb(56, 137, 252)",
+                                                width: 3
+                                            },
+                                            color: "rgb(56, 137, 252)"
+                                        }
+                                    },
+                                    smooth: true
+                                },
+                                {
+                                    type: "line",
+                                    name: "最低气温",
+                                    data: [20, 10, 15, 14, 17, 16, 10],
+                                    itemStyle: {
+                                        normal: {
+                                            lineStyle: {
+                                                color: "rgb(40, 110, 210)",
+                                                width: 3
+                                            },
+                                            color: "rgb(0, 191, 0)"
+                                        }
+                                    },
+                                }
+                            ],
+                            // backgroundColor: "rgb(169, 214, 169)"
+                        }
+
+                    // 使用刚指定的配置项和数据显示图表。
+                    myChart.setOption(option);
+                </script>
+                <div id="chaxun" style="margin-left: -17px;float: right;">
+                      <!-- <i class="fa fa-sun" aria-hidden="true"></i> -->
+                      <label for="star">Star</label>
+                      <input type="text" id="firstname"  placeholder="YY-mm-dd" class="ra" autocomplete="off">
+                      <label for="end">End</label>
+                      <input type="text"   placeholder="YY-mm-dd" class="ra" autocomplete="off">
+                      <button type="submit" class="btn1 btn-default">查询</button>
+                    </div>
+             </div>
+            </div>
+            <!-- 对应的光照强度 -->
+            <div class="main">
+              <div style="float: left;" class="divl">
+              <table class="table table-bordered">
+                <!-- <caption>历史数据</caption> -->
+                <thead>
+                    <tr>
+                        <th>时间</th>
+                        <th>最高光照强度</th>
+                        <th>最低光照强度</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2019/6/18 </td>
+                        <td>25℃</td>
+                        <td>11℃</td>
+                    </tr>
+                    <tr>
+                        <td>2019/6/19 </td>
+                        <td>23℃</td>
+                        <td>11℃</td>
+                    </tr>
+                    <tr>
+                        <td>2019/6/20 </td>
+                        <td>28℃</td>
+                        <td>11℃</td>
+                    </tr>
+                     <tr>
+                        <td>2019/6/21 </td>
+                        <td>32℃</td>
+                        <td>11℃</td>
+                    </tr> 
+                    <tr>
+                        <td>2019/6/22 </td>
+                        <td>29℃</td>
+                        <td>11℃</td>
+                    </tr> 
+                    <tr>
+                        <td>2019/6/23 </td>
+                        <td>27℃</td>
+                        <td>11℃</td>
+                    </tr> 
+                    <tr>
+                        <td>2019/6/24 </td>
+                        <td>24℃</td>
+                        <td>11℃</td>
+                    </tr> 
+                </tbody>
+              </table><div>
+                <ul class="pagination">
+                  <li><a href="#">&laquo;下一页</a></li>
+                  
+                  <li><a href="#">&raquo;下一页</a></li>
+                  </ul>
+              </div></div>
+              <div style="float: right; margin: 50px 50px 0px 0px;">
+               <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                <div id="main6" style="width: 540px;height:340px;"></div>
+                <script type="text/javascript">
+                    // 基于准备好的dom，初始化echarts实例
+                    var myChart = echarts.init(document.getElementById('main6'));
+
+                    // 指定图表的配置项和数据
+                    var option = {
+                            title: {
+                                text: "光照强度",
+                                textStyle: {
+                                    color: "rgb(51, 53, 51)"
+                                },
+                                // backgroundColor: "rgb(186, 216, 186)"
+                            },
+                            tooltip: {
+                                trigger: "axis"
+                            },
+                            legend: {
+                                data: ["最高光照强度", "最低光照强度"]
+                            },
+                            toolbox: {
+                                show: true,
+                                feature: {
+                                    dataView: {
+                                        show: true,
+                                        iconStyle: {
+                                                borderColor: "rgb(226, 200, 31)"
+                                                },
+                                        readOnly: true
+                                    },
+                                    magicType: {
+                                        type: ["line", "bar"],
+                                        show: false
+                                    },
+                                    restore: {
+                                      iconStyle: {
+                                                borderColor: "rgb(226, 200, 31)"
+                                                },
+                                        show: true
+                                    },
+                                    saveAsImage: {
+                                      iconStyle: {
+                                                borderColor: "rgb(226, 200, 31)"
+                                                },
+                                        show: true
+                                    },
+                                    dataZoom: {
+                                      iconStyle: {
+                                                borderColor: "rgb(226, 200, 31)"
+                                                },
+                                        show: true
+                                    },
+                                    mark: {
+                                        show: false
+                                    }
+                                }
+                            },
+                            calculable: true,
+                            xAxis: [
+                                {
+                                    type: "category",
+                                    boundaryGap: false,
+                                    data: ["2019/6/18", "2019/6/18", "2019/6/18", "2019/6/18", "2019/6/18", "2019/6/18", "2019/6/18"],
+                                    axisTick: {
+                                        length: 5,
+                                        interval: 0
+                                    },
+                                    splitNumber: 51,
+                                    splitLine: {
+                                        show: false
+                                    },
+                                    axisLabel: {
+                                        interval: 0,
+                                        show: true
+                                    }
+                                }
+                            ],
+                            yAxis: [
+                                {
+                                    type: "value",
+                                    name: "ppm"
+                                }
+                            ],
+                            series: [
+                                {
+                                    name: "最高光照强度",
+                                    type: "line",
+                                    data: [32, 30, 21, 22, 34, 31, 22],
+                                    itemStyle: {
+                                        normal: {
+                                            lineStyle: {
+                                                // color: "rgb(194, 53, 49)",
+                                                 color: "rgb(206, 180, 31)",
+
+                                                width: 3
+                                            },
+                                            color: "rgb(226, 200, 31)"
+                                        }
+                                    },
+                                    smooth: true
+                                },
+                                {
+                                    type: "line",
+                                    name: "最低光照强度",
+                                    data: [20, 10, 15, 14, 17, 16, 10],
+                                    itemStyle: {
+                                        normal: {
+                                            lineStyle: {
+                                                color: "rgb(206, 160, 31)",
+                                                width: 3
+                                            },
+                                            color: "rgb(226, 200, 31)"
+                                        }
+                                    },
+                                }
+                            ],
+                            // backgroundColor: "rgb(169, 214, 169)"
+                        }
+
+                    // 使用刚指定的配置项和数据显示图表。
+                    myChart.setOption(option);
+                </script>
+                <div id="chaxun" style="margin-left: -17px;float: right;">
+                      <!-- <i class="fa fa-sun" aria-hidden="true"></i> -->
+                      <label for="star">Star</label>
+                      <input type="text" id="firstname"  placeholder="YY-mm-dd" class="ra" autocomplete="off">
+                      <label for="end">End</label>
+                      <input type="text"   placeholder="YY-mm-dd" class="ra" autocomplete="off">
+                      <button type="submit" class="btn1 btn-default">查询</button>
+                    </div>
+             </div>
+            </div>
+          </div>
+        </div>
+    </div>
+ </div>
+<script>
+        $(function () {
+          
+          $(".tab-item").mouseenter(function () {
+            //两件事件
+            $(this).addClass("active").siblings().removeClass("active");
+            var idx = $(this).index();
+            $(".main").eq(idx).addClass("selected").siblings().removeClass("selected");
+          });
+          
+        });</script>
+<script src="./vendor/jquery/jquery.min.js"></script>
+<script src="./vendor/popper.js/popper.min.js"></script>
+<script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="./vendor/chart.js/chart.min.js"></script>
+<script src="./js/carbon.js"></script>
+<script src="./js/demo.js"></script>
+</body>
+</html>
